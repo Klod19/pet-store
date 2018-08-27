@@ -20,13 +20,7 @@ public class PetstoreApplication {
 		cat1.getRace();
 		cat1.play();
 		dog1.play();
-//		cat1.getName();
-//		cat1.get_cat_type();
-//		cat1.getAge();
-//		cat1.getEye_colour();
-//		cat1.getFur_colour();
-//
-//		System.out.println("fark");
+
 
 	}
 

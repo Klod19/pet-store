@@ -62,11 +62,14 @@ public class Animal {
         System.out.println(this.name + " " + "is eating");
     }
 
+    Timer timer;
+
+    //LOOK INTO timer.schedule(task,delay,period)
 
     public void play(){
         // creating timer task, timer
 //        TimerTask tasknew = new TimerTask();
-        Timer timer = new Timer();
+        timer = new Timer();
 
         Cat_play cat_play = new Cat_play(this.getName());
 
@@ -80,6 +83,12 @@ public class Animal {
         if(this.getRace() == "Dog"){
             timer.scheduleAtFixedRate(dog_play, 500, 5000);
         }
+    }
+
+    public void action(int seconds){
+        timer = new Timer();
+
+        timer.schedule(this.play(), seconds*120);
     }
 
 
