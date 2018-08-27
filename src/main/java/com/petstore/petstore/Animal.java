@@ -85,11 +85,20 @@ public class Animal {
         }
     }
 
-    public void action(int seconds){
-        timer = new Timer();
 
-        timer.schedule(this.play(), seconds*120);
+    class RemindTask extends TimerTask {
+        public void run() {
+            System.out.println("Time's up!");
+            timer.cancel(); //Terminate the timer thread
+        }
     }
+
+
+//    public void action(int seconds){
+//        timer = new Timer();
+//
+//        timer.schedule(this.play(), seconds*120);
+//    }
 
 
 
